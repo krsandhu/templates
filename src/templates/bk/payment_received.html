@@ -7,16 +7,19 @@ bodyClass: bg-gray-100 dark-mode:bg-gray-999
 <extends src="src/layouts/main.html">
   <block name="template">
     <p class="text-2xl sm:leading-32 text-black dark-mode:text-white font-semibold m-0 mb-36 font-serif">
-      Thanks for your order.
+      Thanks for your payment.
     </p>
     <p class="m-0 mb-24">
-      This email is a receipt for your order number 12345. You do not need to make any further payment in relation to this order.
+      This email is a confirmation that we received the payment slip for your order number 12345. 
+    </p>
+    <p class="m-0 mb-24 font-bold">
+      Please wait patiently for our team to confirm the payment.
     </p>
 
     <p class="m-0 mb-24">
       Order #12345
       <br />
-      Status: Shipped
+      Status: User Paid, Wait to Confirm
     </p>
 
     <table class="w-full mb-32">
@@ -29,17 +32,10 @@ bodyClass: bg-gray-100 dark-mode:bg-gray-999
           <td>Product #1</td>
           <td>£1.00</td>
         </tr>
-        <tr>
-          <td>Product #2</td>
-          <td>£2.00</td>
-        </tr>
-        <tr>
-          <td>Product #3</td>
-          <td>£3.00</td>
-        </tr>
+      
       </tbody>
     </table>
-
+   
     <a
       href="https://example.com"
       class="inline-block uppercase py-16 px-24 text-base font-semibold text-center no-underline text-white bg-blue-500 hover:bg-blue-600"
@@ -59,18 +55,6 @@ bodyClass: bg-gray-100 dark-mode:bg-gray-999
         ]><i style="letter-spacing: 24px; mso-font-width: -100%">&#8202;</i><!
       [endif]-->
     </a>
-    <table class="w-full">
-      <tr>
-        <td class="py-32">
-          <hr class="border-gray-100 border-b-0" />
-        </td>
-      </tr>
-    </table>
-    <p class="m-0 mb-16 text-gray-500">
-      Want a full VAT invoice for your records? <a class="text-gray-500" href="https://example.com">Download PDF invoice</a>
-    </p>
-    <p class="m-0 mb-16 text-gray-500">
-      This order will appear as "COMPANY X" on your statement from your payment provider. Click <a class="text-gray-500" href="https://example.com">here</a> to update your delivery or payment details.
-    </p>
+   
   </block>
 </extends>

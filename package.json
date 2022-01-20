@@ -6,6 +6,7 @@
     "watch": "maizzle serve"
   },
   "dependencies": {
+    "@maizzle/cli": "^1.4.0",
     "@maizzle/framework": "^3.7.2"
   },
   "name": "templates",

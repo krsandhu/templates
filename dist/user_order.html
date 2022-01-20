@@ -36,7 +36,7 @@
         }
       </style>
     <![endif]-->
-      <title>Welcome!</title>
+      <title>Your receipt for order {order_number}</title>
       <style>:root {
           color-scheme: light dark;
           supported-color-schemes: light dark;
@@ -68,7 +68,7 @@
   </head>
   <body style="margin: 0; width: 100%; padding: 0; word-break: break-word; -webkit-font-smoothing: antialiased; background-color: #f3f4f6;">
       <div style="display: none;">
-        Thank you for signing up, time to get started&#847; &#847; &#847; &#847; &#847; &#847; &#847;
+        Thank you for your order&#847; &#847; &#847; &#847; &#847; &#847; &#847;
         &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;
         &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;
         &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847;
@@ -82,7 +82,7 @@
         &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &zwnj;
         &#160;&#847; &#847; &#847; &#847; &#847;
       </div>
-    <div role="article" aria-roledescription="email" aria-label="Welcome!" lang="en">
+    <div role="article" aria-roledescription="email" aria-label="Your receipt for order {order_number}" lang="en">
       <table class="sm-w-full" align="center" style="width: 600px;" cellpadding="0" cellspacing="0" role="presentation">
   <tr>
     <td class="sm-py-32 sm-px-24" style="padding: 48px; text-align: center;">
@@ -102,12 +102,34 @@
                     <tr>
                       <td class="sm-px-24" style="background-color: #ffffff; padding: 48px; text-align: left; font-size: 16px; line-height: 24px; color: #1f2937;">
     <p class="sm-leading-32" style="margin: 0; margin-bottom: 36px; font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif; font-size: 24px; font-weight: 600; color: #000000;">
-      Welcome. Time to get started.
+      Thanks for your order.
     </p>
     <p style="margin: 0; margin-bottom: 24px;">
-      Thanks for signing up to our service. To get started, do something by clicking the big button below
+      This email is a confirmation for your order number {order_number}.
     </p>
-    <a href="https://example.com" class="hover-bg-blue-600" style="display: inline-block; background-color: #3b82f6; padding-left: 24px; padding-right: 24px; padding-top: 16px; padding-bottom: 16px; text-align: center; font-size: 16px; font-weight: 600; text-transform: uppercase; color: #ffffff; text-decoration: none;">
+    <p style="margin: 0; margin-bottom: 24px;">
+      Order #{order_number}
+      <br>
+      Status: Wait for payment
+    </p>
+    <table style="margin-bottom: 32px; width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
+      <thead>
+        <th>Item</th>
+        <th>Price</th>
+      </thead>
+      <tbody>
+        {#each product}
+        <tr>
+          <td>{this.name}</td>
+          <td>{this.price}</td>
+        </tr>
+        {/each}
+      </tbody>
+    </table>
+    <div>
+      {order_note}
+    </div>
+    <a href="{purchase_url}" class="hover-bg-blue-600" style="display: inline-block; background-color: #3b82f6; padding-left: 24px; padding-right: 24px; padding-top: 16px; padding-bottom: 16px; text-align: center; font-size: 16px; font-weight: 600; text-transform: uppercase; color: #ffffff; text-decoration: none;">
       <!--[if mso
         ]><i
           style="
@@ -117,21 +139,11 @@
           "
           >&#8202;</i><!
       [endif]-->
-      <span style="mso-text-raise: 16px">Do the thing</span>
+      <span style="mso-text-raise: 16px">View Order Details</span>
       <!--[if mso
         ]><i style="letter-spacing: 24px; mso-font-width: -100%">&#8202;</i><!
       [endif]-->
     </a>
-    <table style="width: 100%;" cellpadding="0" cellspacing="0" role="presentation">
-      <tr>
-        <td style="padding-top: 32px; padding-bottom: 32px;">
-          <hr style="border-bottom-width: 0px; border-color: #f3f4f6;">
-        </td>
-      </tr>
-    </table>
-    <p style="margin: 0; margin-bottom: 16px; color: #6b7280;">
-      You are receiving this message because you signed up to account at https://example.com. Manage your notification preferences <a href="https://example.com" style="color: #6b7280;">here</a>.
-    </p>
                       </td>
                     </tr>
                   </table>
